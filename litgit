@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Review Form</title>
+    <link rel="stylesheet" href="styles.css" />
+    
+    
+  </head>
+  <body>
+    <h1 id= title>  Literature Book Review </h1>
+    <p id="description" >Please fill out this form with the required information</p>
+    <form id="survey-form" method="post" action='https://register-demo.freecodecamp.org'>
+      <fieldset>
+        <label id="name-label">Name: <input placeholder="Please Enter Full Name " id="name" type="text" required /></label>
+        <label id="email-label">Email: <input placeholder="Please Enter Email" id="email" type="email" required /></label>
+        <label id="number-label">Phone Number: <input placeholder="Please Enter Phone Number" id="number" type="number" required min="10" max="11" /></label>
+        <label for="referrer">Please Select a  Book Genre
+          <select id="dropdown" name="dropdown">
+            <option value="">(select one)</option>
+            <option value="1">Fiction</option>
+            <option value="2">NonFiction</option>
+            <option value="3">Reference</option>
+            <option value="4">Other</option>
+          </select>
+        </label>
+      </fieldset>
+      <fieldset>
+        <legend> Would you read this book again? (required)</legend>
+        
+        <label for="yes-response"><input id="yes-response" type="radio" name="my-response" class="inline" value="yes" checked /> Yes</label>
+        <label for="no-response"><input id="no-response" type="radio" name="my-response" class="inline" value="no"/> No</label>
+        <label for="maybe-response">
+          <input id="maybe-response" type="radio" name="my-response" class="inline" value="maybe" checked /> maybe</label>
+        /*<label for="no-comment">*/
+          <input id="no-comment" type="radio" name="my-response" class="inline" value="no comment"/> No comment</label>
+       </fieldset>
+       <fieldset>
+        </label>
+        <label for="comments">Please leave additional comments below:
+          <textarea id="comments" name="comments" rows="3" cols="30" placeholder="Four score and seven years ago..."></textarea>
+        </label>
+      </fieldset>
+      
+      <label for="terms-and-conditions">
+        <input class="inline" value="I accept the terms and conditions" id="terms-and-conditions" type="checkbox" required name="terms-and-conditions" /> I accept the <a href="https://www.freecodecamp.org/news/terms-of-service/">terms and conditions</a>
+        <input class="inline" value= "I refuse all terms" id="refuse" type="checkbox" required name="refuse-all-terms" /> I refuse all terms</label>
+      <input id= "submit" type="submit" value="Submit" />
+</form>
+  </html>
