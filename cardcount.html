@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./cardcount.css" />
+ </head>
+<body id="container">
+
+<h1><img id="picturesque"src="./club-48940_1280.png"/>My Little Card Counter<img id="picturesque"src="./club-48940_1280.png"/></h1> 
+<h2>Click The Card Below!</h2>
+
+
+<div class="instruction1"><p id="demo"></p></div>
+
+<p id="instruction2"></p>  
+
+<button onclick="cardCounter()"><img src="./SVG-cards-1.3/queen_of_hearts2.svg"/></button>
+
+
+
+<script>
+  function cardCounter(){
+
+  let mycount=0;
+  let card=prompt("Please enter your card!");
+    if(Number.isInteger(parseInt(card))==true && parseInt(card)<7){
+      mycount ++; 
+  }
+    if(Number.isInteger(parseInt(card))!=true || parseInt(card)==10){
+    mycount--;
+    
+    }else{
+        mycount +=0; 
+          
+    }
+    let text;
+    console.log(mycount);
+    
+      if (mycount > 0){
+            text= "Bet";
+            }else{
+            text= "Hold";
+            } 
+            let mydoc =document.getElementById("demo").innerHTML = text;
+          }
+          
+</script>
+
+</body>
+</html>
